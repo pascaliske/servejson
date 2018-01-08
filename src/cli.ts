@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as pkg from '../package.json'
 import { Logger, Arguments } from 'modern-cli'
 import { resolve } from 'path'
