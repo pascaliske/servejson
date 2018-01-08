@@ -15,7 +15,7 @@ $ yarn global add @pascaliske/servejson
 
 ## CLI
 
-Use the globally installed cli to quickly open up a servejson:
+Use the globally installed cli to quickly serve a json file:
 
 ```bash
 $ servejson <path/to/file.json> [<custom-port>]
