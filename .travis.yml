@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '9'
+- '8'
+- '7'
+install:
+- yarn install
+- yarn run build
+script:
+- yarn run test
+deploy:
+  provider: npm
+  email: info@pascal-iske.de
