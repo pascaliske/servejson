@@ -11,3 +11,10 @@ script:
 deploy:
   provider: npm
   email: info@pascal-iske.de
+  api_key:
+    secure: GPFrG1RT/Oz/UH6PqATv/YPwaklF4nW6BfnhWYWIAXUOmO7yiVZJHRO9KFdtKvsrzZdFV9RMWuFTLB3LH2BgpXGOoyRrecWTa8IbQgEUKk0soqcor/PaH16u+vbgfq2869iXD6JCqSPSOGxZ6b8DNMkHySE2j2MIgZCBzqoAOI+W2sfqh/ynIIs2y9KDnkKN8cjXyBwqkxeh7HDEz+kiyC9Xk/ik5e6eu8fH+SAMjXJ3KsnGvtokzbMjt6C2GXAPLo3B40M8lOvLf6g7NSiHBKU2C6wJAOIsx6wXIb1//nd/6PYxIJrp24sTfYzfL/ssWavjQVxSL4Y6oWGuVKrcrZa5v8qkjg1ao/PDsqJJFGi06hzvHLFFkgLuwglxm7VL9Fjmd/15Ay/lSMJ6ZBlc0XVgZ8xC1XbFJKDuKHqfqy7CslSpSWnM5Pou8HY873c5hapdMjpcq96ceD1dGbtRXDUYYUYenR5sDvnPuCLxLLGw1a13KmONMiGfrQSJWs1xTm7X38a5+7W53jVxXV/T9JqNju2jEsdcbnedaKpYlVT54RuB06TAmjxQh9mqgLF7/A9OJh6tbPuB1qA8taben1S+ggejyrWI1jz9094x8kCx5gmL+7iwyjDzzdNJoLdCG1mZLC3JZYZf6qVqVQXXtDl0uZAdcoVf4nMbZpCFzfg=
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
+    node: 9
