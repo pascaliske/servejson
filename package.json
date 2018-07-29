@@ -39,9 +39,9 @@
   },
   "devDependencies": {
     "@types/express": "^4.11.0",
-    "@types/node": "^9.3.0",
-    "ava": "^0.24.0",
-    "typedoc": "^0.9.0",
+    "@types/node": "^10.5.4",
+    "ava": "^0.25.0",
+    "typedoc": "^0.11.1",
     "typescript": "^2.6.2"
   }
 }
