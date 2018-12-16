@@ -23,25 +23,33 @@
     "servejson": "dist/cli.js"
   },
   "scripts": {
-    "build": "rm -rf dist/ && tsc",
+    "build": "rm -rf dist/ && tsc --project tsconfig.json",
     "watch": "yarn run build --watch",
     "docs": "rm -rf docs/ && typedoc --target es5 --mode file --module commonjs --ignoreCompilerErrors --excludePrivate --out docs/ src/*.ts",
-    "test": "ava tests/*.js"
+    "test": "ava tests/*.js",
+    "lint": "tslint --config tslint.json --fix src/**/*.ts",
+    "format": "prettier --config .prettierrc --write \"{src,tests}/**/*.{ts,js}\""
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "browser-sync": "^2.23.3",
-    "cors": "^2.8.4",
-    "express": "^4.16.2",
-    "modern-cli": "^2.0.7"
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.1",
+    "cors": "^2.8.5",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@types/express": "^4.11.0",
+    "@types/debug": "^0.0.31",
+    "@types/express": "^4.16.0",
     "@types/node": "^10.12.8",
     "ava": "^1.0.1",
+    "prettier": "^1.15.3",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
     "typedoc": "^0.13.0",
-    "typescript": "^2.6.2"
+    "typescript": "^3.2.2"
   }
 }
