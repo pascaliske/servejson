@@ -1,40 +1,34 @@
 #!/usr/bin/env node
 
-import * as pkg from '../package.json'
-import { Logger, Arguments } from 'modern-cli'
 import { resolve } from 'path'
 import * as express from 'express'
+import * as debug from 'debug'
 import * as cors from 'cors'
+import chalk from 'chalk'
 
-// fetch package data
-const { name, version } = (<any>pkg)
+// tslint:disable-next-line
+const { name, version } = require('../package.json')
 
 // enable logging
-process.env.DEBUG = name
+debug.enable(name)
 
-const log: Logger = new Logger(name)
-const args: Arguments = new Arguments()
-const file: string = args.get(0) || false
-const port: number = args.get(1) || 9001
+const log = debug(name)
+const file: string = process.argv[2] || ''
+const port: number = parseInt(process.argv[3], 10) || 9001
 
 // log version
 log(`v${version}`)
 
-// check given url
-if (!file) {
-    log.red('Please enter a file to serve!')
+// check given file path
+if (file.length === 0) {
+    log(chalk.red('Please enter a file to serve!'))
     process.exit(1)
 }
 
 // create express server
 const app = express()
-
 app.use(cors())
-
-app.get('/', (req: express.Request, res: express.Response) => {
-    res.sendFile(resolve(file))
-})
-
+app.all('*', (req, res) => res.sendFile(resolve(file)))
 app.listen(port, () => {
-    log(`serving ${Logger.cyan(file)} at ${Logger.cyan(`http://localhost:${port}`)}`)
+    log(`serving ${chalk.cyan(file)} at ${chalk.cyan(`http://localhost:${port}`)}`)
 })

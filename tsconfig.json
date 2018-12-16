@@ -8,12 +8,17 @@
     ],
     "outDir": "./dist",
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "importHelpers": true,
     "declaration": true,
     "declarationDir": "./typings",
-    "experimentalDecorators": true
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
-    "./typings.d.ts",
     "./src/**/*.ts"
   ]
 }

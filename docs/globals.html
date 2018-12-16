@@ -71,7 +71,6 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#app" class="tsd-kind-icon">app</a></li>
-								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#args" class="tsd-kind-icon">args</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#file" class="tsd-kind-icon">file</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#log" class="tsd-kind-icon">log</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#name" class="tsd-kind-icon">name</a></li>
@@ -86,41 +85,31 @@
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="app" class="tsd-anchor"></a>
-					<h3>app</h3>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> app</h3>
 					<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Express</span><span class="tsd-signature-symbol"> =&nbsp;express()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L30">cli.ts:30</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
-					<a name="args" class="tsd-anchor"></a>
-					<h3>args</h3>
-					<div class="tsd-signature tsd-kind-icon">args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Arguments</span><span class="tsd-signature-symbol"> =&nbsp;new Arguments()</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L16">cli.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/5b7701a/src/cli.ts#L29">cli.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="file" class="tsd-anchor"></a>
-					<h3>file</h3>
-					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;args.get(0) || false</span></div>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> file</h3>
+					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;process.argv[2] || &#x27;&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L17">cli.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/5b7701a/src/cli.ts#L16">cli.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="log" class="tsd-anchor"></a>
-					<h3>log</h3>
-					<div class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Logger</span><span class="tsd-signature-symbol"> =&nbsp;new Logger(name)</span></div>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> log</h3>
+					<div class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IDebugger</span><span class="tsd-signature-symbol"> =&nbsp;debug(name)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L15">cli.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/5b7701a/src/cli.ts#L15">cli.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -130,17 +119,17 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L10">cli.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/5b7701a/src/cli.ts#L10">cli.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
 					<a name="port" class="tsd-anchor"></a>
-					<h3>port</h3>
-					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;args.get(1) || 9001</span></div>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> port</h3>
+					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;parseInt(process.argv[3], 10) || 9001</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L18">cli.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/5b7701a/src/cli.ts#L17">cli.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -150,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/77fcd4f/src/cli.ts#L10">cli.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pascaliske/servejson/blob/5b7701a/src/cli.ts#L10">cli.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -168,9 +157,6 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#app" class="tsd-kind-icon">app</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#args" class="tsd-kind-icon">args</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#file" class="tsd-kind-icon">file</a>
