@@ -17,4 +17,4 @@ deploy:
   on:
     tags: true
     branch: master
-    node: 9
+    node: 11
